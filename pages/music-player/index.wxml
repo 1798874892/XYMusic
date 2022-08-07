@@ -1,0 +1,22 @@
+<!--pages/music-player/index.wxml-->
+<!-- 1、背景 -->
+<view>窝嫩叠</view>
+<image   mode="aspectFill" class="bg-image" src="{{currentSong.al.picUrl}}"></image>
+<view class="bg-cover"></view>
+
+<!-- 2、导航 -->
+<nav-bar>
+    <view class="tab" slot="title">
+        <view class="{{currentPage  === 0 ? 'active'  : ' '}}">歌曲</view>
+        <view class="divider">|</view>
+        <view class="{{currentPage  === 1 ? 'active'  : ' '}}">歌词</view>
+    </view>
+</nav-bar>
+
+<!-- 3、内容 -->
+<swiper class="content" 
+              style="height:  {{contentHeight}}px;"
+              bindchange="handleSwiperChange">
+    <swiper-item  style="color: black;">1</swiper-item>
+    <swiper-item  style="color: black;">2</swiper-item>
+</swiper>
